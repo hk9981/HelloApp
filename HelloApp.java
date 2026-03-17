@@ -6,18 +6,23 @@
  */
 public class HelloApp {
     public static void main(String[] args) {
+
+        // Default case
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } 
         else {
-            String result = "";
+            String names = "";
+
+            // Enhanced for-loop
             for (String name : args) {
-                result += name + ", ";
+                names += name + ", ";
             }
-            result = result.substring(0, result.length() - 2);
 
-            System.out.println("Hello, " + result + "!");
+            // Remove trailing ", "
+            names = names.substring(0, names.length() - 2);
+
+            System.out.println("Hello, " + names + "!");
         }
-
     }
 }
