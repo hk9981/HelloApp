@@ -1,21 +1,22 @@
 /**
  * HelloApp.java
- * UC5: Display "Hello" using Enhanced For-Loop with Multiple Arguments or Default Message
+ * UC6: Display "Hello" using Enhanced For-Loop and Substring Method
  *
  * @author hk9981
  */
 public class HelloApp {
     public static void main(String[] args) {
-
-        // If no arguments → default
         if (args.length == 0) {
             System.out.println("Hello, World!");
         } 
         else {
-            // Enhanced for-loop
+            String result = "";
             for (String name : args) {
-                System.out.println("Hello, " + name + "!");
+                result += name + ", ";
             }
+            result = result.substring(0, result.length() - 2);
+
+            System.out.println("Hello, " + result + "!");
         }
 
     }
